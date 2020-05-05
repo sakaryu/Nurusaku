@@ -3,10 +3,14 @@ orbs:
   node: circleci/node@1.1.6
 jobs:
   build-and-test:
+    environment:
+      MY_VERSION: 1.0.0
     executor:
       name: node/default
     steps:
       - checkout
+      - restore_cache:
+          key: v1-{{ checksum "_my_version" }}
       - node/with-cache:
           steps:
             - run: yarn install
