@@ -2,7 +2,7 @@
   <v-app>
     <v-app-bar fixed app color="primary" class="white--text">
       <v-app-bar-nav-icon class="white--text" />
-      <v-toolbar-title text="入力" />
+      <v-toolbar-title v-text="'入力'" />
     </v-app-bar>
     <v-content>
       <v-container>
